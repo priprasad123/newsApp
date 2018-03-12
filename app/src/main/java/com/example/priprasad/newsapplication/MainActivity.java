@@ -35,7 +35,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    String url= "https://newsapi.org/v2/top-headlines?country=us&apiKey=6fcf9cfe37024ac4b3ccdd0187c91568";
+    String url= "https://newsapi.org/v2/top-headlines?country=us&apiKey=89db18d3132641819962b740153217b3";
     ListView listNews;
     ProgressBar loader;
     CustomAdapter adapter;
@@ -85,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
             {
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
-                    Toast.makeText(getApplicationContext(), "Unexpected error", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(MainActivity.this, Detail_Activity.class);
                     i.putExtra("url", dataList.get(position).get(KEY_URL));
                     startActivity(i);

@@ -71,6 +71,7 @@ public class ViewHolder extends BaseAdapter {
             {
                 holder.galleryImage.setVisibility(View.GONE);
             }else{
+
                 Picasso.with(activity)
                         .load(song.get(MainActivity.KEY_URLTOIMAGE).toString())
                         .resize(300, 200)
